@@ -9,21 +9,21 @@ from Animal import Animal
 
 class Cat(Animal):
 
-    hair = "short hair"
-
-    def __init__(self):
-        super().__init__()
-        print("我是一只猫")
+    def __init__(self,hair,name,color,age,sex):
+        super().__init__(name,color,age,sex)
+        self.hair = hair
+        print("子类初始化")
 
     def action(self):
-        print("我会抓老鼠")
+        print(f"{self.name}会抓老鼠")
 
     def wow(self):
-        print("我会叫，喵喵叫")
+        print(f"{self.name}会叫，喵喵叫")
 
 if __name__ == '__main__':
-    a_cat = Cat()
+    a_cat = Cat("short","huahua","gray","3","girl")
     print(a_cat.age)
-    print(a_cat.wow())
-    print(a_cat.action())
+    print(a_cat.hair)
+    a_cat.wow()
+    a_cat.action()
 

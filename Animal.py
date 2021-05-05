@@ -5,22 +5,22 @@
 @File ：Animal.py
 """
 class Animal:
-    name = "huahua"
-    color = "yellow"
-    age = "3"
-    sex = "female"
 
-    def __init__(self):
+    def __init__(self,name,color,age,sex):
+        self.name = name
+        self.color = color
+        self.age = age
+        self.sex = sex
         print("初始化")
 
     def wow(self):
-        print("我会叫，嗷呜")
+        print(f"{self.name}会叫，嗷呜")
 
     def run(self):
         print("我会跑")
 
 
 if __name__ == '__main__':
-    a_Animal = Animal()
+    a_Animal = Animal("dahuang","yellow","5","female")
     print(a_Animal.age)
-    print(a_Animal.wow())
+    a_Animal.wow()
